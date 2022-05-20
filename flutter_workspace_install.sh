@@ -33,6 +33,7 @@ cd $HOME/development/
 echo "Iniciando instalação do Android Studio"
 
 echo "Aguarde a abertura do Android Studio e efetue a instalação (Next-Next-Finish)"
+echo "Após instalado o Android Studio e aberto, acesse More Actions > SDK Manager > SDK Tools > Marque Android SDK Command-Line-Tools"
 echo ""
 read -p "Pressione Enter para iniciar a instalação..." enter
 
@@ -43,6 +44,10 @@ cd $HOME/development/android-studio/bin
 
 ./studio.sh
 
+echo "Executando flutter doctor"
 flutter doctor --android-licenses
+
+#Precisou para identificar o flutter doctor depois da instalação
+export PATH=$HOME/development/flutter/bin:$PATH
 
 echo "Fim da instalação"
