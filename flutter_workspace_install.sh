@@ -24,6 +24,7 @@ echo "Exportando path"
 export PATH=$HOME/development/flutter/bin:$PATH
 
 echo "Atualizando Bash"
+echo 'export PATH=$HOME/development/flutter/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
 
 sudo apt-get install lib32stdc++6
@@ -46,8 +47,5 @@ cd $HOME/development/android-studio/bin
 
 echo "Executando flutter doctor"
 flutter doctor --android-licenses
-
-#Precisou para identificar o flutter doctor depois da instalação
-export PATH=$HOME/development/flutter/bin:$PATH
 
 echo "Fim da instalação"
